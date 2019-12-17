@@ -1,4 +1,4 @@
-[English](./README.md) | 简体中文 
+简体中文 
 
 <h1 align="center">Asterfusion</h1>
 
