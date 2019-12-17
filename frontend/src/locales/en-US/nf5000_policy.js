@@ -174,5 +174,6 @@ export default {
     'app.policy.view': 'View',
     'app.policy.defaultRuleExist': 'have default rule , can not add new default rule',
     'app.policy.updateToDefaultRuleExist': 'have default rule , can not reset a new default rule',
-    'app.policy.tapplet.waring.info': 'Currently, Tapplet is disabled and the forwarding policy cannot be configured. Configure the policy after enabling it.',
+    'app.policy.tapplet.waring.info': 'Currently, Tapplet is disabled and the forwarding policy cannot be configured.',
+    'app.policy.tapplet.use.tapplet': 'Start Tapplet'
 }

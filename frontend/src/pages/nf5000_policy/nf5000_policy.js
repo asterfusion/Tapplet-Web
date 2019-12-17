@@ -4,7 +4,7 @@ import GroupsPane from "./components/GroupsPane"
 import Groups from './components/Groups/Groups'
 import { PageHeaderWrapper } from "@ant-design/pro-layout"
 import { formatMessage, FormattedMessage } from 'umi-plugin-react/locale'
-import { message, Spin,Alert } from "antd"
+import { message, Spin,Alert,Col, Button, Card } from "antd"
 import { DndProvider } from "react-dnd"
 import HTML5Backend from "react-dnd-html5-backend"
 import { connect } from "dva";
@@ -12,6 +12,7 @@ import { getElementPosition, getMousePosition } from './utils/tools'
 import RuleConnect from './components/RuleConnect'
 import isEqual from 'lodash/isEqual'
 import cloneDeep from 'lodash/cloneDeep'
+import Link from 'umi/link'
 
 
 @connect(({nf5000_policy, nf5000_user, nf5000_global})=>{
@@ -376,7 +377,14 @@ export default class NewPolicyPage extends Component {
             <Spin spinning={loading}>
                 <DndProvider backend={HTML5Backend}> 
                     <Platform {...platProps}/>
-                    <Alert style={{display:tappletWaringStatus}} type="warning" message={formatMessage({id:'app.policy.tapplet.waring.info'})}/>
+                    <Card style={{display:tappletWaringStatus}}>
+                    <Alert className='ant-col ant-col-14' type='warning' message= {formatMessage({id:'app.policy.tapplet.waring.info'})}></Alert>    
+                     <Link to="/business/setting">
+                     <Button type='primary' style={{marginTop:'3px',marginLeft:'10px'}}>
+                     {formatMessage({id:'app.policy.tapplet.use.tapplet'})}
+                     </Button>
+                     </Link>
+                     </Card>
                     <GroupsPane
                         igroups={<Groups {...iGroupsProps} />}
                         egroups={<Groups {...eGroupsProps} />}

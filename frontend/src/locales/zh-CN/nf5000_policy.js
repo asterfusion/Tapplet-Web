@@ -174,5 +174,6 @@ export default{
     'app.policy.view': '查看',
     'app.policy.defaultRuleExist': '已创建默认规则，不可重复创建默认规则！',
     'app.policy.updateToDefaultRuleExist': '已存在默认规则，不可重复设置默认规则！',
-    'app.policy.tapplet.waring.info': '当前Tapplet为停用状态，转发策略不可配置，请启用后配置策略！',
+    'app.policy.tapplet.waring.info': '当前Tapplet为停用状态，转发策略不可配置！',
+    'app.policy.tapplet.use.tapplet': '启用Tapplet'
 }

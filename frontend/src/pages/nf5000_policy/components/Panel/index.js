@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import styles from './style.less'
-import Port from '../Interfaces/Port'    //G1、G3、G5、G7四个口
-import Xport from '../Interfaces/Xport'  //X1、X2两个口
-import Portdown from '../Interfaces/Port_down' //G2、G4、G6、G8四个口
+import Port from '../Interfaces/Port'  
 import { connect } from 'dva'
 import { Button } from 'antd'
 

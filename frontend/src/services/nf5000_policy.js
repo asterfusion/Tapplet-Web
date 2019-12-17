@@ -99,18 +99,6 @@ export async function deleteAllPolicy() {
     return request('/api/policy/ResetPolicy')
 }
 
-//端口配置
-export async function portConfigure(params) {
-    return request('/api/port/ListPort', {
-        method: 'POST',
-        body: JSON.stringify(params)
-    })
-}
-
-export async function queryPort(params){
-    return request(`/api/port/ListPort?name=${ encodeURIComponent(params)}`)
-}
-
 //获取默认规则配置信息
 export async function getDefaultRuleInterface() {
     return request('/api/policy/getDefaultRuleInterface')

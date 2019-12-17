@@ -229,9 +229,7 @@ class Home extends Component{
                                         )}else{
                                             return(
                                                 <React.Fragment key={8+index}>
-                                                <Popover >
-                                                    <div className={styles.in2_below}></div>
-                                            </Popover>  
+                                                <div className={styles.in2_below}></div>
                                                 <div className={styles.blank}></div>
                                             </React.Fragment>
                                         )

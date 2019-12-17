@@ -1,23 +1,11 @@
 import React, { Component } from 'react'
 import { Modal, Card, Button, Icon, Upload, Spin, Form, message } from 'antd'
 import { formatMessage, FormattedMessage } from 'umi-plugin-react/locale'
-import PortConfig from './Interfaces/PortConfigureForm'
 import Port from './Interfaces/Port'
 import Panel from './Panel'
 import styles from '../nf5000_policy.less'
 import { connect } from 'dva';
 import FileDown from './download'
-
-
-
-//端口配置的modal框
-const PortConfigForm = Form.create()(
-    props => {
-        return (
-            <PortConfig {...props}></PortConfig>
-        )
-    }
-)
 
 @connect(({nf5000_home, nf5000_user, nf5000_policy, nf5000_global,loading})=>{
     return {
@@ -31,15 +19,6 @@ export default class Platform extends Component {
     constructor(props){
         super(props)
         this.state={
-            //Loading
-            portqueryloading: false,
-            //port
-            isportConfigure: false,
-            portqueryloading:false,
-            portconfigloading: false,
-            portname: "",
-            portnumber:"",
-            //upload
             isUpload: false,
             isUploading: false,
             importLoading: false,
@@ -80,56 +59,7 @@ export default class Platform extends Component {
             refreshGroups()
         })
     }
-    /**
-     * 配置端口
-     */
-    portConfig = (i) => {
-        const { dispatch } = this.props
-        this.setState({
-            isportConfigure:true,
-            portqueryloading:true
-        })
-        dispatch({
-            type: `nf5000_policy/queryPort`,
-            payload: i
-        }).then(()=>{
-            this.setState({
-                portqueryloading:false
-            })
-        }).finally(()=>{
-            this.setState({
-                portnumber:i,
-                portname: formatMessage({id:"app.policy.portname"})+i,
-            })
-        })
-    }
-    portConfighandleOk = (info) => {
-        const {dispatch} = this.props
-        this.setState({
-            isportConfigure: true,
-            portconfigloading: true
-        })
 
-        dispatch({
-            type: `nf5000_policy/ConfigPort`,
-            payload: info
-        })
-
-        dispatch({
-            type: `nf5000_home/fetchPortinformation`,
-        }).finally(()=>{
-            this.setState({
-                isportConfigure: false,
-                portconfigloading: false
-            })
-        })
-    }
-
-    portConfigHandleCancel = () => {
-        this.setState({
-            isportConfigure: false
-        })
-    }
     /**
      * 是否导入配置
      */
@@ -163,16 +93,11 @@ export default class Platform extends Component {
                 clearContent, importContent, exportContent,
                 refreshGroups, refreshRuleConnect, currentVppstatus} = this.props
         const canWrite = (currentPerm["policy_write"] && currentVppstatus === "RUNNING")
-        const { portname, portnumber, isportConfigure, portqueryloading, portconfigloading, 
-                isUpload, isUploading, importLoading } = this.state
+        const { isUpload, isUploading, importLoading } = this.state
 
         const portProps = {
-            isAddPort: this.handleAddPort, isEditEGroup: handleIsEditEGroup, portConfig: this.portConfig, canWrite: (currentPerm["policy_write"] && currentVppstatus === "RUNNING"),
+            isAddPort: this.handleAddPort, isEditEGroup: handleIsEditEGroup, canWrite: (currentPerm["policy_write"] && currentVppstatus === "RUNNING"),
             currentVppstatus: currentVppstatus
-        }
-        const portConfigProps = { 
-            portname: portname, isportConfigure: isportConfigure, okHandle: this.portConfighandleOk, handleCancel: this.portConfigHandleCancel, currentPort:currentPort,
-            portnumber: portnumber, portqueryloading: portqueryloading, portconfigloading: portconfigloading, canWrite: (currentPerm["policy_write"] && currentVppstatus === "RUNNING")
         }
         //导入配置
         const uploadProps = {
@@ -230,9 +155,6 @@ export default class Platform extends Component {
                 </Card>
                 {
                     isUpload ? <IsUpload {...isUploadProps}></IsUpload> : null
-                }
-                {
-                    isportConfigure ? <PortConfigForm {...portConfigProps}></PortConfigForm> : null
                 }
                 </>
         )

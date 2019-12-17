@@ -2,7 +2,7 @@ import { Effect } from 'dva';
 import { Reducer } from 'redux';
 import { queryIPolicies, queryEPolicies, createIGroups, createEGroups, editIGroups, editEGroups, deleteIGroups, deleteEGroups, addPort, deletePort,
     queryRuleConnect, createRuleGroups, deleteRuleGroups, createRules, deleteRules, getRuleGroupRules,
-    deleteAllPolicy, portConfigure, queryPort , getDefaultRuleInterface } from '@/services/nf5000_policy';
+    deleteAllPolicy, getDefaultRuleInterface } from '@/services/nf5000_policy';
 
 
 export interface CurrentPolicy {
@@ -41,8 +41,6 @@ export interface PolicyModelType {
         createRule: Effect;
         deleteRule: Effect;
         deleteAllPolicy: Effect;
-        ConfigPort: Effect;
-        queryPort: Effect;
         defaultRuleInterface: Effect;
     };
     reducers: {
@@ -50,7 +48,6 @@ export interface PolicyModelType {
         query_epolicies: Reducer<GroupModelState>;
         query_ruleConnect: Reducer<GroupModelState>;
         query_certainruleGroup: Reducer<GroupModelState>;
-        query_port: Reducer<GroupModelState>;
         query_default_rule_interface: Reducer<GroupModelState>;
     };
 }
@@ -134,18 +131,6 @@ const PolicyModel: PolicyModelType = {
         *deleteAllPolicy(_, {call, put}){
             return yield call(deleteAllPolicy)
         },
-        //配置端口信息
-        *ConfigPort({payload}, {call, put}){
-            return yield call(portConfigure, payload)
-        },
-        //获取端口信息
-        *queryPort({payload}, { call, put}){
-            const response = yield call(queryPort, payload)
-            yield put({
-                type: 'query_port',
-                payload: response,
-            })
-        },
         *defaultRuleInterface({payload}, { call, put}){
             const response = yield call(getDefaultRuleInterface, payload)
             yield put({
@@ -177,12 +162,6 @@ const PolicyModel: PolicyModelType = {
             return {
                 ...state,
                 currentCertainRuleGroup: action.payload || []
-            }
-        },
-        query_port(state, action) {
-            return {
-                ...state,
-                currentPort: action.payload.data || []
             }
         },
         query_default_rule_interface(state, action) {
