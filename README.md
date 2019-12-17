@@ -37,8 +37,8 @@ kvm上保持该目录结构
  -frontend       #前端源码 
   -new_static    #编译后放置前端静态资源（kvm上保留该文件夹即可）
   -config        #前端配置 
-  -src			 #前端实现脚本	
-  -help			 #用户手册
+  -src           #前端实现脚本	
+  -help          #用户手册
 ```
 
 使用

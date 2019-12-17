@@ -1,0 +1,73 @@
+@import '~antd/lib/style/themes/default.less';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: auto;
+  background: @layout-body-background;
+  background-image: url('../assets/sf3000_login.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.header {
+  width: 100%;
+  height: 65px;
+}
+.logo {
+  width: 180px;
+  height: 50px;
+  line-height: 44px;
+  float: left;
+  margin: 10px 0 0 8px;
+}
+.lang {
+  width: 40px;
+  height: 40px;
+  line-height: 44px;
+  margin: 12px 0 0 0;
+  float: right;
+  color: #fff;
+  :global(.ant-dropdown-trigger) {
+    margin-right: 24px;
+  }
+}
+
+.content {
+  flex: 1;
+  padding: 62px 0;
+}
+
+@media (min-width: @screen-md-min) {
+  .container {
+    background-image: url('../assets/sf3000_login.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .content {
+    padding: 62px 0 24px 0;
+  }
+}
+
+.top {
+  text-align: center;
+  width: 487px;
+  //height: 382px;
+  border: 1px solid #cccccc;
+  background: url(../assets/sf3000_login_center.jpg);
+  position: absolute;
+  top: calc( 50% - 133px );
+  left: calc( 50% - 245px );
+  box-shadow: .8px .8px 5px .1px #444444;
+}
+
+.head {
+  height: 44px;
+  line-height: 44px;
+  font-size: 20px;
+  margin: 48px 0 18px 0;
+  text-align: center;
+  
+}
+
