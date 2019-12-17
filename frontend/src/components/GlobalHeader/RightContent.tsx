@@ -42,10 +42,8 @@ class GlobalHeaderRight extends Component<GlobalHeaderRightProps> {
             }),
           ]}
           onSearch={value => {
-            console.log('input', value); // tslint:disable-line no-console
           }}
           onPressEnter={value => {
-            console.log('enter', value); // tslint:disable-line no-console
           }}
         />
         <Tooltip

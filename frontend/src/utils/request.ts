@@ -4,7 +4,7 @@
  */
 import { extend } from 'umi-request';
 import { notification } from 'antd';
-import { async } from 'q';
+import { formatMessage } from 'umi/locale';
 
 interface ResponseError<D = any> extends Error {
   name: string;
@@ -47,11 +47,23 @@ const errorHandler = (error: ResponseError) => {
   const { response = {} as Response } = error;
   const errortext = codeMessage[response.status] || response.statusText;
   const { status, url } = response;
-  if(status == 500) {
+  if (status == 500) {
       notification.error({
-      message: `请求错误 ${status}: ${url}`,
-      description: errortext,
-    });
+          message:formatMessage({'id': 'user-login.request.error'}) ` ${status}: ${url}`,
+          description: errortext,
+      });
+  }
+  if (status == 401) {
+      notification.error({
+          message: formatMessage({'id': 'user-login.no.rights'})` ${status}: ${url}`,
+          description: errortext,
+      });
+  }
+  if (status == 4011) {
+      notification.error({
+          message: formatMessage({'id': 'user-login.login.valid'}) ` ${status}: ${url}`,
+          description: errortext,
+      });
   }
 
 };
@@ -64,10 +76,11 @@ const request = extend({
   credentials: 'include', // 默认请求是否带上cookie
 });
 
+
 // request拦截器, 改变url 或 options.
 request.interceptors.request.use(async (url, options) => {
 
-  let lang = localStorage.getItem("umi_locale");
+  let lang = localStorage.getItem("lang");
   if (lang) {
     const headers = {
       'lang': lang
@@ -97,5 +110,29 @@ request.interceptors.request.use(async (url, options) => {
 //   }
 //   return response;
 // });
+//response拦截器, 处理response
+request.interceptors.response.use(async (response, options) => {
+  let token = response.headers.get("x-auth-token");
+  let data = await response.clone().json()
+  if (data && data.status_code == 401) {
+      notification.error({
+          message: formatMessage({ 'id': 'app.system.msg.no.right' }),
+          description: response.url,
+      });
+  }
+  if (data && data.status_code == 4011) {
+      window.location.href = '#/auth/login';
+  }
+  if (data && (data.status_code == 500 || data.status_code === 502)) {
+      notification.error({
+          message: formatMessage({ 'id': 'app.system.msg.no.right' }),
+          description: response.url,
+      });
+  }
+  if (token) {
+      localStorage.setItem("x-auth-token", token);
+  }
+  return response;
+});
 
 export default request;

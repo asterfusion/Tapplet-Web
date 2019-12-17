@@ -44,7 +44,7 @@ export interface DefaultSettings {
 
 export default {
   navTheme: '',
-  primaryColor: '#d0121b',
+  primaryColor: '#1e50a0',
   layout: 'sidemenu',
   contentWidth: 'Fluid',
   fixedHeader: false,
@@ -54,7 +54,7 @@ export default {
   menu: {
     locale: true,
   },
-  title: 'Teraspek',
+  title: 'Asterfusion',
   pwa: false,
   iconfontUrl: '',
 } as DefaultSettings;

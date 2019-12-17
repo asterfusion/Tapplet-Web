@@ -59,7 +59,7 @@ export default {
   'menu.system.configwrite': '保存配置',
   'menu.system.configreset': '复位配置',
   'menu.system.hostname': '主机名配置',
-  'menu.business.setting': '参数设置',
+  'menu.business.setting': 'Tapplet设置',
   'menu.log': '日志管理',
   'menu.log.log': '操作日志',
   'meun.waringlog': '告警日志',

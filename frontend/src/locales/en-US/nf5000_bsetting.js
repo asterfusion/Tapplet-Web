@@ -1,0 +1,16 @@
+export default {
+  "app.bussiness.breadcrumb": "Global Configuration",
+  "app.bussiness.setting.breadcrumb": "Tapplet Setting",
+  'app.vpp.status': 'Tapplet Status：',
+  'app.vpp.up': 'Start',
+  'app.vpp.down': 'Stop',
+  'app.start.successfully': 'Start Tapplet Successfully!',
+  'app.start.failed': 'Fail to start Tapplet!',
+  'app.stop.successfully': 'Stop Tapplet Successfully!',
+  'app.stop.failed': 'Fail to stop Tapplet!',
+  'app.button.start': "Start",
+  'app.button.stop': "Stop",
+  'app.bussiness.vpp.config': "Tapplet Configuration",
+  'app.bussiness.vpp.confirm': "Are you sure to stop Tapplet ?",
+  'app.bussiness.vpp.start.confirm': "Are you sure to start Tapplet ?",
+};

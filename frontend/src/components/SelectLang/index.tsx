@@ -12,7 +12,7 @@ interface SelectLangProps {
 const SelectLang: React.FC<SelectLangProps> = props => {
   const { className } = props;
   const selectedLang = getLocale();
-  const changeLang = ({ key }: ClickParam) => {setLocale(key, false);}
+  const changeLang = ({ key }: ClickParam) => {setLocale(key, false);localStorage.setItem('lang', key);location.reload(true);}
   const locales = ['zh-CN', 'en-US'];
   const languageLabels = {
     'zh-CN': '简体中文',

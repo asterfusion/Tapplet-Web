@@ -4,14 +4,14 @@ import settingDrawer from './zh-CN/settingDrawer';
 import settings from './zh-CN/settings';
 import pwa from './zh-CN/pwa';
 import component from './zh-CN/component';
-import users from './zh-CN/sf3000_users';
-import login from './zh-CN/sf3000_login';
-import home from './zh-CN/sf3000_home';
-import policy from './zh-CN/sf3000_policy';
-import system from './zh-CN/sf3000_system';
-import bsetting from './zh-CN/sf3000_bsetting';
-import log from './zh-CN/sf3000_log';
-import statistics from './zh-CN/sf3000_statistics';
+import users from './zh-CN/nf5000_users';
+import login from './zh-CN/nf5000_login';
+import home from './zh-CN/nf5000_home';
+import policy from './zh-CN/nf5000_policy';
+import system from './zh-CN/nf5000_system';
+import bsetting from './zh-CN/nf5000_bsetting';
+import log from './zh-CN/nf5000_log';
+import statistics from './zh-CN/nf5000_statistics';
 
 export default {
   'navBar.lang': '语言',

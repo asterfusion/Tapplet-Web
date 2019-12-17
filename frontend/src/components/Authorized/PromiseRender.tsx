@@ -23,9 +23,7 @@ export default class PromiseRender<T, K> extends React.Component<
   };
 
   componentDidMount() {
-    console.log(this.props)
     this.setRenderComponent(this.props);
-    
   }
 
   shouldComponentUpdate = (
@@ -42,18 +40,15 @@ export default class PromiseRender<T, K> extends React.Component<
 
   // set render Component : ok or error
   setRenderComponent(props: IPromiseRenderProps<T, K>) {
-    console.log("ok or error",this.props)
     const ok = this.checkIsInstantiation(props.ok);
     const error = this.checkIsInstantiation(props.error);
     props.promise
       .then(() => {
-        console.log("ok!")
         this.setState({
           component: ok,
         });
       })
       .catch(() => {
-        console.log("error!")
         this.setState({
           component: error,
         });
@@ -80,8 +75,6 @@ export default class PromiseRender<T, K> extends React.Component<
   render() {
     const { component: Component } = this.state;
     const { ok, error, promise, ...rest } = this.props;
-    console.log("render")
-    console.log(this.props)
     return Component ? (
       <Component {...rest} />
     ) : (

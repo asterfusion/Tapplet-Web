@@ -3,8 +3,8 @@ import { AnyAction } from 'redux';
 import { RouterTypes } from 'umi';
 import { GlobalModelState } from './global';
 import { UserModelState } from './user';
-import { UserMode1State } from './sf3000_user';
-import { LoginMode1State } from './sf3000_login';
+import { UserMode1State } from './nf5000_user';
+import { LoginMode1State } from './nf5000_login';
 import { DefaultSettings as SettingModelState } from '../../config/defaultSettings';
 import { MenuDataItem } from '@ant-design/pro-layout';
 export { GlobalModelState, SettingModelState, UserModelState, UserMode1State, LoginMode1State };
@@ -41,8 +41,8 @@ export interface ConnectState {
   loading: Loading;
   settings: SettingModelState;
   user: UserModelState;
-  sf3000_user: UserMode1State;
-  sf3000_login: LoginMode1State;
+  nf5000_user: UserMode1State;
+  nf5000_login: LoginMode1State;
 }
 
 export interface Route extends MenuDataItem {

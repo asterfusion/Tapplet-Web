@@ -58,9 +58,9 @@ export default {
   'menu.system.configwrite': 'Save Configuration',
   'menu.system.configreset': 'Reset Configuration',
   'menu.system.hostname': 'Hostname Configuration',
-  'menu.business.setting': 'Common Config Setting',
-  'menu.business': 'Business Setting',
+  'menu.business.setting': 'Tapplet Setting',
+  'menu.business': 'Global Setting',
   'menu.log.log': 'Operate Log',
-  'menu.log.waringlog': 'Warning Log',
-  'menu.log': 'Log Management',
+  'menu.log.waringlog': 'Waring Log',
+  'menu.log': 'Log Managerment',
 };
