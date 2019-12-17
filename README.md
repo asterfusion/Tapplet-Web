@@ -1,6 +1,6 @@
-简体中文 
+[English](./README.en.md)  |  简体中文  
 
-<h1 align="center">Asterfusion</h1>
+<h1 align="center">Tapplet-Web</h1>
 
 ### 功能
 Tapplet-Web通过Web界面的方式配置管理Tapplet，功能包含如下：
