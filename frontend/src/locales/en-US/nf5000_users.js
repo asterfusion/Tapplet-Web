@@ -1,0 +1,98 @@
+export default {
+    "app.users.usermanage.breafcrumb": "User Management",
+    "app.users.user.breafcrumb": "User Configuration",
+    "app.users.role.breafcrumb": "User Configuration",
+
+    "app.users.user.title": "Users Management",
+
+    "app.users.user.create": "Create User",
+    "app.users.user.username": "Username",
+    "app.users.user.password": "Password",
+    "app.users.user.name": "Fullname",
+    "app.users.user.email": "Email",
+    "app.users.user.department": "Department",
+    "app.users.user.rolename": "Role",
+    "app.users.user.telephone": "Telephone",
+    "app.users.user.description": "Description",
+    "app.users.user.description.tip": "(Most 100 characters)",
+    "app.users.user.action": "Action",
+
+    "app.users.user.add": "Adding User",
+    "app.users.user.edit": "Editing User",
+    "app.users.user.action.edit": "Edit",
+    "app.users.user.action.delete": "Delete",
+
+    "app.users.role.create": "Create Role",
+    "app.users.role.rolename": "Rolename",
+    "app.users.role.description": "Description",
+    "app.users.role.action": "Action",
+
+    "app.users.role.add": "Adding Role",
+    "app.users.role.edit": "Configuring Role",
+    "app.users.role.action.edit": "Configuration",
+    "app.users.role.action.delete": "Delete",
+
+    "app.users.role.permissions": "Permissions",
+    "app.users.role.permissions.funcPermissions": "Function Permissions",
+    "app.users.role.permissions.usermanage": "User Management",
+    "app.users.role.permissions.policy": "Forwarding Policy",
+    "app.users.role.permissions.system": "System Configuration",
+    "app.users.role.permissions.business": "Global Setting",
+    "app.users.role.permissions.log": "Log Management",
+    "app.users.role.permissions.read": "Read",
+    "app.users.role.permissions.write": "Write",
+
+    "app.users.role.menu.user": "Users Management",
+    "app.users.role.menu.role": "Roles Management",
+    "app.users.role.menu.policy": "Forwarding policy",
+    "app.users.role.menu.time": "Time Zone Configuration",
+    "app.users.role.menu.configwrite": "Save Configuration",
+    "app.users.role.menu.configreset": "Reset Configuration",
+    "app.users.role.menu.hostname": "Hostname Configuration",
+    "app.users.role.menu.setting": "Tapplet Setting",
+    "app.users.role.menu.log": "Operate Log",
+    "app.users.role.menu.waringlog": "Warning Log",
+
+    "app.users.role.menu.system": "System Management",
+
+    //提示信息
+    //user
+    "app.users.user.msg.create.limit": "Most creating 50 users!",
+    "app.users.user.msg.format.length": "Most 100 characters!",
+    "app.users.user.msg.description.format.length": "Most 100 characters!",
+    "app.users.user.msg.username": "Please input the username!",
+    "app.users.user.msg.username.format": "Please use letter, number or underline!",
+    "app.users.user.msg.username.format.duplication": "The username has existed!",
+    "app.users.user.msg.password": "Please input the password!",
+    "app.users.user.msg.password.format": "Please use letter, number or underline!",
+    "app.users.user.msg.password.format.length": "Most 20 characters!",
+    "app.users.user.msg.password.format.minlength": "Please input at least six characters!",
+    "app.users.user.msg.fullname": "Please input the name!",
+    "app.users.user.msg.fullname.format": "Please input the correct name!",
+    "app.users.user.msg.email": "Please input the email!",
+    "app.users.user.msg.email.format": "Please input the correct email!",
+    "app.users.user.msg.department": "Please input the department!",
+    "app.users.user.msg.department.format": "Please input the correct department!",
+    "app.users.user.msg.rolename": "Please input the rolename!",
+    "app.users.user.msg.telephone": "Please input the telephone number!",
+    "app.users.user.msg.telephone.format": "Please input the correct telephone number!",
+    
+
+    //role
+    "app.users.role.msg.create.limit": "Most creating 50 roles!",
+    "app.users.role.msg.rolename": "Please input the rolename!",
+    "app.users.role.msg.rolename.format": "Please use letter, number or underline!",
+    "app.users.role.msg.rolename.format.duplication": "The rolename has existed!",
+    "app.users.role.msg.delete.role.fail": "Before deleting role, all users which connect to it must be deleted!",
+    "app.users.role.msg.title": "Role name",
+    "app.users.role.msg.des": "Description",   
+    "app.users.msg.create.success": "Create successfully!",
+    "app.users.msg.create.fail": "Failed to create!",
+    "app.users.msg.edit.success": "Edit successfully!",
+    "app.users.msg.edit.fail": "Failed to edit!",
+    "app.users.msg.delete.success": "Delete successfully!",
+    "app.users.msg.delete.fail": "Failed to delete!",
+    "app.users.role.msg.rolename.format.number": "Rolename can not be pure number!",
+
+
+}

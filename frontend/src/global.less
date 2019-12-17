@@ -1,0 +1,103 @@
+@import '~antd/lib/style/themes/default.less';
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+.ant-layout {
+  min-height: 100vh;
+}
+
+.ant-layout-footer{
+  display:none !important;
+}
+
+.ant-pro-sider-menu-logo{
+  background-color: #1e50a0 !important;
+  height:64px !important;
+  box-shadow: 0px 0.3px;
+  padding-left: 15px !important;
+}
+
+.ant-pro-sider-menu-logo img{
+  height:50px !important;
+}
+
+.ant-layout-sider-children{
+  background-color: #1e50a0 !important;
+}
+
+.ant-menu {
+  background-color: #1e50a0 !important;
+}
+
+.ant-menu-item > a {
+  color: #ffffff !important;
+}
+
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background-color: #8aa3d4 !important;
+}
+
+.ant-menu-submenu-title .anticon + span{
+  color: #ffffff !important;
+}
+
+.ant-menu-submenu-title .anticon{
+  color: #ffffff !important;
+}
+
+.ant-menu-inline, .ant-menu-vertical, .ant-menu-vertical-left{
+  border-right: 1px solid #1e50a0 !important;
+}
+
+.ant-pro-sider-menu-logo h1{
+  display: block !important;
+}
+
+.ant-menu-submenu-arrow::after, .ant-menu-submenu-arrow::before{
+  background-image: linear-gradient(to right, #ffffff, #ffffff) !important;
+}
+
+.ant-list-split {.ant-list.item{
+  padding:unset !important;
+}
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+@media (max-width: @screen-xs) {
+  .ant-table {
+    width: 100%;
+    overflow-x: auto;
+    &-thead > tr,
+    &-tbody > tr {
+      > th,
+      > td {
+        white-space: pre;
+        > span {
+          display: block;
+        }
+      }
+    }
+  }
+}

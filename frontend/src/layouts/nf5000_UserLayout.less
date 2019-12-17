@@ -1,0 +1,104 @@
+@import '~antd/lib/style/themes/default.less';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: auto;
+  background: @layout-body-background;
+  background-image: url('../assets/nf5000_as_bg.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.header {
+  width: 100%;
+  height: 65px;
+}
+.logo {
+  width: 100px;
+  height: 82px;
+  line-height: 44px;
+  float: left;
+  margin: 10px 0 0 8px;
+}
+.lang {
+  width: 40px;
+  height: 40px;
+  line-height: 44px;
+  margin: 12px 0 0 0;
+  float: right;
+  color: #fff;
+  :global(.ant-dropdown-trigger) {
+    margin-right: 24px;
+  }
+}
+
+.content {
+  flex: 1;
+  padding: 62px 0;
+}
+
+@media (min-width: @screen-md-min) {
+  .container {
+    background-image: url('../assets/nf5000_as_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .content {
+    padding: 62px 0 24px 0;
+  }
+}
+
+.top {
+  text-align: center;
+  top: calc(58%);
+  left: calc(50%);
+  background: url(../assets/nf5000_as_form.jpg);
+  position: absolute;
+  background-size: 100%;
+  width: 900px;
+  height: 400px;
+  margin-left: -451px;
+  margin-top: -260px;
+}
+
+.head {
+  height: 44px;
+  line-height: 44px;
+  font-size: 20px;
+  margin: 48px 0 18px 0;
+  text-align: center;
+}
+
+.formcontent {
+  width: 260px;
+  height: 400px;
+  position: absolute;
+  right: 30px;
+  color: #1d50a2;
+}
+
+.formtitle {
+  left: 0px;
+  clear: both;
+  font-size: 18px;
+  position: relative;
+  top: 50px;
+}
+
+.login_foot {
+  width: 100%;
+  text-align: center;
+  margin-top: 830px;
+  margin-bottom: 15px;
+  color: #1d50a2;
+}
+
+@media only screen and (max-width:1280px) {
+  .login_foot {
+  width: 100%;
+  text-align: center;
+  margin-top: 35%;
+}
+}
