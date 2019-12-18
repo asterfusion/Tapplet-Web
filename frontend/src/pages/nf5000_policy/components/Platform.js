@@ -203,7 +203,6 @@ class Legend extends Component {
 }
 
 class PolicyButton extends Component {
-
     render(){
         const { handleDeleteAllPolicy, handleIsUpload, clearContent, importContent, exportContent, canWrite } = this.props
         return (

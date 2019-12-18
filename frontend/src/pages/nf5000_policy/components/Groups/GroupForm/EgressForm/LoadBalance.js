@@ -133,9 +133,6 @@ export default class LoadBalance extends Component {
                             <Select.Option key='3' value={"outer_src_dst_ip"}>Outer_Src_Dist_IP</Select.Option>
                             <Select.Option key='4' value={"outer_src_ip"}>Outer_Src_IP</Select.Option>
                             <Select.Option key='5' value={"outer_dst_ip"}>Outer_Dist_IP</Select.Option>
-                            <Select.Option key='6' value={"inner_src_dst_ip"}>Inner_Src_Dist_IP</Select.Option>
-                            <Select.Option key='7' value={"inner_src_ip"}>Inner_Src_IP</Select.Option>
-                            <Select.Option key='8' value={"inner_dst_ip"}>Inner_Dist_IP</Select.Option>
                         </Select>
                     </div>
                 </div>

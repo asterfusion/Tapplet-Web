@@ -24,29 +24,41 @@ Tapplet-Web can configure and manage Tapplet through the Web, the functions are 
   - Warning Log
 ```
 
-## Usage
+## Catalogue Structure
+Use this catalogue structure in kvm
+```
 
-### Use Command
+```
+-Tapplet-Web
+ -backend        #backend source code  
+  -data          #Backend uses database and configuration files and static resources
+  -rest           
+  -tornado
+  -web           #Backend interface script
+  -web_start.py  #Backend startup script 
+ -frontend       #Frontend source code
+  -new_static    #Place frontend static resources after compilation
+  -config        #Frontend configuration
+  -src           #Frontend implementation script	
+  -help          #User manual
+```
 
+
+Usage
+### Frontend uses command lines
 ```bash
 $ git clone https://github.com/asterfusion/Tapplet-Web.git
-$ cd Tapplet-Web
+$ cd Tapplet-Web/frontend 
 $ npm install
-$ npm start         # visit http://localhost:8000
+$ npm start         #local visit：http://localhost:6061 (interact with kvm through nginx)
 ```
-### Integrated  Development  Environment
-```
-Frontend        :  Ant  Design  v4.0.0
-Backend          :  Python3/Tornado
-Environment  :  Liunx(Kvm  Tapplet)
 
-```
 ###  Nginx Configuration(Local development and debugging)
 ```bash
   server  {
 listen  6061;                                        
 location  ~  ^/(auth|api|nw|logout)/  {
-        proxy_pass  http://192.168.3.65:81;    #kvm  a certain ip
+        proxy_pass  http://192.168.3.65:81;    #kvm running ip
     }  
     location  /  {
         proxy_pass  http://127.0.0.1:8001;        
@@ -54,6 +66,21 @@ location  ~  ^/(auth|api|nw|logout)/  {
     
     }
 ```    
+
+### 后端使用命令行
+```bash
+$ git clone https://github.com/asterfusion/Tapplet-Web.git #If cloned, deploy the code to kvm
+$ cd Tapplet-Web/backend/ 
+$ sudo python3 web_start.py #start server，backend must be deployed in kvm
+                            #Backend default port【http：81，https：82】, visit http://kvm.ip:81
+```
+
+### Integrated  Development  Environment
+```
+Frontend        :  Ant  Design  v4.0.0
+Backend          :  Python3/Tornado
+Environment  :  Liunx(Kvm  Tapplet)
+```
 
 ###  Configuration Environment
 ```

@@ -194,11 +194,9 @@ class Home extends Component{
                                             )}else{
                                                 return(
                                                     <React.Fragment key={index}>
-                                                    <Popover >
                                                         <div className={styles.in1_above}></div>
-                                            </Popover>  
-                                                <div className={styles.blank}></div>
-                                            </React.Fragment>
+                                                        <div className={styles.blank}></div>
+                                                    </React.Fragment>
                                         )
                                             }
                                     }) : null }
@@ -229,9 +227,9 @@ class Home extends Component{
                                         )}else{
                                             return(
                                                 <React.Fragment key={8+index}>
-                                                <div className={styles.in2_below}></div>
-                                                <div className={styles.blank}></div>
-                                            </React.Fragment>
+                                                    <div className={styles.in2_below}></div>
+                                                    <div className={styles.blank}></div>
+                                                </React.Fragment>
                                         )
                                         }
                                     }) : null }
