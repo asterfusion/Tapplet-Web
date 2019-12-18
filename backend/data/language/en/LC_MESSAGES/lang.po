@@ -1,0 +1,179 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-25 10:40+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: python_test1.py:6
+msgid "用户管理"
+msgstr "User Manager"
+
+#: python_test1.py:8
+msgid "转发策略"
+msgstr "ForWarding Policy"
+
+#: python_test1.py:9
+msgid "全局配置"
+msgstr "Business Setting"
+
+#: python_test1.py:10
+msgid "系统配置"
+msgstr "System Configuration"
+
+#: python_test1.py:7
+msgid "日志管理"
+msgstr "Log Managerment"
+
+#: python_test1.py:11
+msgid "用户登录"
+msgstr "User Login"
+
+#: python_test1.py:12
+msgid "用户退出"
+msgstr "User Logout"
+
+#: python_test1.py:13
+msgid "添加规则组"
+msgstr "Insert Rulegroup"
+
+#: python_test1.py:14
+msgid "删除规则组"
+msgstr "Delete Rulegroup"
+
+#: python_test1.py:15
+msgid "修改规则组"
+msgstr "Update Rulegroup"
+
+#: python_test1.py:16
+msgid "创建出端口组"
+msgstr "Insert Outgroup"
+
+#: python_test1.py:17
+msgid "更新出端口组"
+msgstr "Update Outgroup"
+
+#: python_test1.py:18
+msgid "删除出端口组"
+msgstr "Delete Outgroup"
+
+#: python_test1.py:19
+msgid "创建入端口组"
+msgstr "Insert Ingroup"
+
+#: python_test1.py:20
+msgid "更新入端口组"
+msgstr "Update Ingroup"
+
+#: python_test1.py:21
+msgid "删除入端口组"
+msgstr "Delete Ingroup"
+
+#: python_test1.py:22
+msgid "添加规则"
+msgstr "Insert Rule"
+
+#: python_test1.py:23
+msgid "删除规则"
+msgstr "Delete Rule"
+
+#: python_test1.py:24
+msgid "保存配置"
+msgstr "Save Configuration"
+
+#: python_test1.py:25
+msgid "复位配置"
+msgstr "Reset Configuration"
+
+#: python_test1.py:26
+msgid "ip分片配置修改"
+msgstr "Replace Configuration: ip_reassembly"
+
+#: python_test1.py:27
+msgid "tcp乱序配置修改"
+msgstr "Replace Configuration: tcp_reassembly"
+
+#: python_test1.py:28
+msgid "KeyWord配置修改"
+msgstr "Replace Configuration: keyword"
+
+#: python_test1.py:29
+msgid "去重配置修改"
+msgstr "Replace Configuration: deduplication"
+
+#: python_test1.py:30
+msgid "未知配置修改"
+msgstr "Replace Configuration: Unknown"
+
+#: python_test1.py:31
+msgid "主机名修改"
+msgstr "Replace Configuration: Hostname"
+
+#: python_test1.py:32
+msgid "导入配置"
+msgstr "Import Configuration"
+
+#: python_test1.py:33
+msgid "导出配置"
+msgstr "Export Configuration"
+
+#: python_test1.py:34
+msgid "时区配置"
+msgstr "Replace Configuration：Time Zone"
+
+#: python_test1.py:35
+msgid "导出日志"
+msgstr "Export Log"
+
+#: python_test1.py:36
+msgid "添加角色"
+msgstr "Insert Role"
+
+#: python_test1.py:37
+msgid "更新角色"
+msgstr "Update Role"
+
+#: python_test1.py:38
+msgid "删除角色"
+msgstr "Delete Role"
+
+#: python_test1.py:39
+msgid "修改端口属性"
+msgstr "Replace Configuration：Port"
+
+#: python_test1.py:40
+msgid "登录错误"
+msgstr "Wrong Login request"
+
+#: python_test1.py:41
+msgid "添加用户"
+msgstr "Insert User"
+
+#: python_test1.py:42
+msgid "修改用户"
+msgstr "Update User"
+
+#: python_test1.py:43
+msgid "删除用户"
+msgstr "Delete User"
+
+
+
+
+
+
+
+
+
