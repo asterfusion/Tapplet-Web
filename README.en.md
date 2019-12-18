@@ -67,7 +67,7 @@ location  ~  ^/(auth|api|nw|logout)/  {
     }
 ```    
 
-### 后端使用命令行
+### Backend uses command lines
 ```bash
 $ git clone https://github.com/asterfusion/Tapplet-Web.git #If cloned, deploy the code to kvm
 $ cd Tapplet-Web/backend/ 

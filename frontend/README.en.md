@@ -1,5 +1,3 @@
-English | [简体中文](./README.md)
-
 <h1 align="center">Asterfusion</h1>
 
 ## Functions
@@ -46,7 +44,7 @@ Environment  :  Liunx(Kvm  Tapplet)
   server  {
 listen  6061;                                        
 location  ~  ^/(auth|api|nw|logout)/  {
-        proxy_pass  http://192.168.3.65:81;    #kvm  a certain ip
+        proxy_pass  http://192.168.3.65:81;    #kvm running ip
     }  
     location  /  {
         proxy_pass  http://127.0.0.1:8001;        
