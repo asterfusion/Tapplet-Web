@@ -31,9 +31,9 @@ def start_vpp():
 	os.system("systemctl start vpp")
 	i=0
 	while(i<30):
-		re=RestApiLogin.r.get(url=dataconfig.fusionnos_url,verify=False)
+		re=RestApiLogin.r.get(url=dataconfig.systemusing_url,verify=False)
 		if re.status_code==200:
-			if json.loads(re.text)["FusionNOS"]["Status"]=="RUNNING":
+			if json.loads(re.text)["vpp"]["Status"]=="RUNNING":
 				vpp_stat='RUNNING'
 				return True
 			else:
@@ -49,9 +49,9 @@ def stop_vpp():
 	os.system("systemctl stop vpp")
 	i=0
 	while(i<30):
-		re=RestApiLogin.r.get(url=dataconfig.fusionnos_url,verify=False)
+		re=RestApiLogin.r.get(url=dataconfig.systemusing_url,verify=False)
 		if re.status_code==200:
-			if json.loads(re.text)["FusionNOS"]["Status"]=="SHUTDOWN":
+			if json.loads(re.text)["vpp"]["Status"]=="SHUTDOWN":
 				vpp_stat='SHUTDOWN'
 				return True
 			else:
@@ -67,10 +67,10 @@ def get_vpp_status():
 	try:
 		vpp_i=0
 		while(vpp_i<30):
-			re=RestApiLogin.r.get(url=dataconfig.fusionnos_url,verify=False)
+			re=RestApiLogin.r.get(url=dataconfig.systemusing_url,verify=False)
 			if re.status_code==200:
-				if json.loads(re.text)["FusionNOS"]["Status"]=='RUNNING' or json.loads(re.text)["FusionNOS"]["Status"]=='SHUTDOWN':
-					data=json.loads(re.text)["FusionNOS"]["Status"]
+				if json.loads(re.text)["vpp"]["Status"]=='RUNNING' or json.loads(re.text)["vpp"]["Status"]=='SHUTDOWN':
+					data=json.loads(re.text)["vpp"]["Status"]
 					return data
 			else:
 				time.sleep(0.5)

@@ -628,7 +628,7 @@ def get_statistic_group():
 	c=con.cursor()
 	outgroup=[]
 	ingroup=[]
-	c.execute("select name from outgroup where lagid not in (1001) ")
+	c.execute("select name from outgroup ")
 	res_outgroup=c.fetchall()
 	if res_outgroup:
 		for i in res_outgroup:

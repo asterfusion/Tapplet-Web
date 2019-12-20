@@ -82,7 +82,7 @@ class Stat:
 			sum_out=0
 			try:
 				data=json.loads(RestApiLogin.r.get(url=dataconfig.stat_url,verify=False).text)
-				for num in range(1,17):
+				for num in range(1,static_interface.num_dict+1):
 					str1='G'+str(num)
 					sum_in=int(data[str1]["in_bps"])+sum_in
 					sum_out=int(data[str1]["out_bps"])+sum_out

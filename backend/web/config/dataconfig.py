@@ -4,13 +4,13 @@ import configparser
 import re
 import subprocess
 from os import  system
-me_ip='https://192.168.3.65'
+me_ip='https://localhost'
 action_url=me_ip+'/rest/v1/actions'
 rule_url=me_ip+'/rest/v1/acl/config'
 interface_url=me_ip+'/rest/v1/interfaces/config'
 login_url=me_ip+'/rest/v1/login'
 logout_url=me_ip+'/rest/v1/logout'
-login_data={'username':'admin','password':'passok'}
+login_data={'username':'admin','password':'admin'}
 stat_url=me_ip+'/rest/v1/interfaces/stat'
 status_url=me_ip+'/rest/v1/interfaces/status'
 systeminfo_url=me_ip+'/rest/v1/system/info'
