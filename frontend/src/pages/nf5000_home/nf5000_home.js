@@ -181,9 +181,9 @@ class Home extends Component{
                                                     <p>{formatMessage({id: 'link.speed'})} {item.speed} <span>M</span></p>
                                                     <Divider dashed="true"/>
                                                     <p>{formatMessage({id: 'packet.receive'})} {item.in_packets}</p>
-                                                    <p>{formatMessage({id: 'packet.receive.speed'})} {item.in_pps} <span>Mbps</span></p>
+                                                    <p>{formatMessage({id: 'packet.receive.speed'})} {item.in_bps} <span>Mbps</span></p>
                                                     <p>{formatMessage({id: 'packet.transmit'})} {item.out_packets}</p>
-                                                    <p>{formatMessage({id: 'packet.transmit.speed'})} {item.out_pps} <span>Mbps</span></p>
+                                                    <p>{formatMessage({id: 'packet.transmit.speed'})} {item.out_bps} <span>Mbps</span></p>
                                                 </div>
                                             }
                                              title={formatMessage({id:arr_id[index]})} trigger="hover" placement="bottom">
@@ -194,12 +194,10 @@ class Home extends Component{
                                             )}else{
                                                 return(
                                                     <React.Fragment key={index}>
-                                                    <Popover >
                                                         <div className={styles.in1_above}></div>
-                                            </Popover>  
-                                                <div className={styles.blank}></div>
-                                            </React.Fragment>
-                                        )
+                                                        <div className={styles.blank}></div>
+                                                    </React.Fragment>
+                                                )
                                             }
                                     }) : null }
                                 </div>
@@ -217,9 +215,9 @@ class Home extends Component{
                                                     <p>{formatMessage({id: 'link.speed'})} {item.speed} <span>M</span></p>
                                                     <Divider dashed="true"/>
                                                     <p>{formatMessage({id: 'packet.receive'})} {item.in_packets}</p>
-                                                    <p>{formatMessage({id: 'packet.receive.speed'})} {item.in_pps} <span>Mbps</span></p>
+                                                    <p>{formatMessage({id: 'packet.receive.speed'})} {item.in_bps} <span>Mbps</span></p>
                                                     <p>{formatMessage({id: 'packet.transmit'})} {item.out_packets}</p>
-                                                    <p>{formatMessage({id: 'packet.transmit.speed'})} {item.out_pps} <span>Mbps</span></p>
+                                                    <p>{formatMessage({id: 'packet.transmit.speed'})} {item.out_bps} <span>Mbps</span></p>
                                                 </div>
                                             } title={formatMessage({id:arr_id[8+index]})} trigger="hover" placement="bottom">
                                                 <Button className={styles.in2_below} style={{backgroundColor: backgroundColor}}></Button>
@@ -229,10 +227,10 @@ class Home extends Component{
                                         )}else{
                                             return(
                                                 <React.Fragment key={8+index}>
-                                                <div className={styles.in2_below}></div>
-                                                <div className={styles.blank}></div>
-                                            </React.Fragment>
-                                        )
+                                                    <div className={styles.in2_below}></div>
+                                                    <div className={styles.blank}></div>
+                                                </React.Fragment>
+                                            )
                                         }
                                     }) : null }
                                 </div>
